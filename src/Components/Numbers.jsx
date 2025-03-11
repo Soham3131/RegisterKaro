@@ -26,7 +26,7 @@ const Numbers = () => {
           </div>
         </div>
 
-        {/* Phone Image - Responsive Adjustments */}
+       
 
 
         {/* <div className="absolute right-0 w-[250px] md:w-[350px] lg:w-[420px] z-10 hidden md:block lg:flex">
@@ -63,7 +63,7 @@ const Numbers = () => {
           />
         </div>
 
-        {/* Show this Image Only on md & sm Screens */}
+      
         <div className="w-full flex justify-center mt-6 lg:hidden">
           <img
             src={Phone}
@@ -76,7 +76,7 @@ const Numbers = () => {
 
 
 
-        {/* For screens ≤ 1025px: Center text & show full phone below */}
+ 
         {/* <div className="w-full flex flex-col items-center text-center lg:hidden">
           <img 
             src={Phone} 
@@ -86,7 +86,7 @@ const Numbers = () => {
         </div> */}
       </div>
 
-      {/* Numbers Section */}
+      {/* Numbers  */}
       <div className="w-full z-50 bg-[#FAFAFA] flex flex-col items-center justify-center py-12">
         <h3 className="text-[14px] z-50 text-orangish">
           WHY <span className="text-orangish">REGISTER</span> KARO
@@ -113,7 +113,7 @@ const Numbers = () => {
         </div>
       </div>
 
-      {/* 1% of the Industry Section */}
+      {/* 1%  */}
       <div className="z-50 w-full bg-gradient-to-r from-[#FFA229] to-[#1C4670] flex flex-col items-center justify-center py-12 px-6">
         <h3 className="text-lg font-semibold text-white">1% OF THE INDUSTRY</h3>
         <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 text-center">
@@ -135,7 +135,7 @@ const Numbers = () => {
         </div>
       </div>
 
-      {/* Company Logos Section */}
+      {/* Company Logos  */}
       <div className="w-full flex justify-center items-center bg-white py-12 px-6">
         <img src={Logos1} alt="Company Logos" />
       </div>

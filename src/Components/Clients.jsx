@@ -4,7 +4,7 @@ import pagination from "../assets/pagination.png";
 const Clients = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center py-16 px-6 gap-12">
-      {/* Title Section */}
+      {/* Title*/}
       <div className="max-w-4xl text-center">
         <h2 className="text-2xl sm:text-3xl font-semibold text-black">Our Happy Clients</h2>
         <p className="text-gray-500 mt-2 text-sm sm:text-base">
@@ -12,7 +12,7 @@ const Clients = () => {
         </p>
       </div>
 
-      {/* Logos Section */}
+      {/* Logo */}
       <div className="w-full flex justify-center items-center">
         <img 
           src={pagination} 
@@ -22,7 +22,7 @@ const Clients = () => {
         />
       </div>
 
-      {/* Show More Button */}
+     
       <button className="text-blue-900 hover:underline flex items-center text-sm sm:text-base">
         Show more →
       </button>

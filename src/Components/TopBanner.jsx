@@ -1,13 +1,37 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import logo from "../assets/logo.png";
 
 const TopBanner = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Toggle menu visibility
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Close menu when clicking outside
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.menu-container')) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [isMenuOpen]);
+
   return (
-    <div className="flex w-full h-[72px] bg-white justify-between items-center px-6 lg:px-14 border-b-2 border-gray-300">
-      {/* Logo Section */}
+    <div className="flex w-full h-[72px] bg-white justify-between items-center px-6 lg:px-14 border-b-2 border-gray-300 relative">
+
       <img src={logo} alt="Logo" className="w-[120px] h-auto" loading="lazy" />
 
-      {/* Navigation Menu */}
+      {/* Navigation Menu  */}
       <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base">
         <p className="cursor-pointer">Home</p>
         <p className="cursor-pointer">Our Services</p>
@@ -19,10 +43,23 @@ const TopBanner = () => {
           Talk to Expert
         </button>
       </div>
-      
-      {/* Mobile Responsive Menu Placeholder (Can Add Dropdown Later) */}
-      <div className="md:hidden">
-        <button className="text-2xl">☰</button>
+
+      {/* Mobile Menu */}
+      <div className="md:hidden relative menu-container">
+        <button className="text-2xl" onClick={toggleMenu}>☰</button>
+
+        {isMenuOpen && (
+          <div className="absolute top-full right-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-300 z-50">
+            <ul className="flex flex-col">
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Home</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Our Services</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Blog</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Contact Us</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">About Us</li>
+              <li className="px-4 py-2 cursor-pointer hover:bg-gray-100">Search</li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

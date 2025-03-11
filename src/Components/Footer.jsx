@@ -11,7 +11,7 @@ const Footer = () => {
           <p className="text-sm mt-8 w-[247px] h-[72px]  text-[#AAB5CD]">
             Design outstanding interfaces with advanced Figma features in a matter of minutes.
           </p>
-          {/* Social Icons */}
+          {/* Social  */}
           <div className="flex space-x-4 text-2xl">
   <FaFacebook className="cursor-pointer" />
   <FaGoogle className="cursor-pointer" />
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright & Back to Top */}
+      
       <div className="flex flex-col items-center mt-10 mb-14 sm:mb-6">
   <img src={uparrow} alt="Back to Top" className="w-10 h-10 cursor-pointer" />
   <p className="mt-4 text-sm text-[#AAB5CD]">© 2024 Registerkaro. All Rights Reserved.</p>

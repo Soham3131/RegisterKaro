@@ -105,18 +105,18 @@ const Blogs = () => {
         </h2>
       </div>
 
-      {/* Blog Cards Container */}
+      {/* Blog  */}
       <div className="max-w-[1280px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {blogs.map((blog) => (
           <div key={blog.id} className="bg-white p-0">
-            {/* Blog Image */}
+            {/* Blog  */}
             <img
               src={blog.image}
               alt={blog.title}
               className="w-full h-[200px] object-cover"
             />
             
-            {/* Blog Content */}
+            {/* content*/}
             <div className="p-5">
               <p className="text-sm text-gray-500">
                 {blog.author} • {blog.date}
@@ -125,12 +125,12 @@ const Blogs = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mt-1">
                   {blog.title}
                 </h3>
-                {/* Arrow Icon */}
+               
                 <ArrowUpRight className="text-gray-700 w-5 h-5" />
               </div>
               <p className="text-gray-600 text-sm mt-2">{blog.description}</p>
 
-              {/* Tags */}
+              {/* Tag */}
               <div className="flex flex-wrap mt-3 gap-2">
                 {blog.tags.map((tag, index) => (
                   <span
@@ -146,7 +146,6 @@ const Blogs = () => {
         ))}
       </div>
 
-      {/* Show More Button */}
       <button className="mt-10 px-6 py-2 bg-[#1C4670] text-white font-semibold rounded-lg hover:bg-blue-700 transition">
         Show more blogs →
       </button>

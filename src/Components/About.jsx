@@ -29,10 +29,10 @@ const About = () => {
         </button>
       </div>
 
-      {/* Right Side - Image with Decorative Elements */}
+      {/* Right Side */}
       <div className="about-image-container relative w-[600px] px-[71px]">
         <div className="relative w-[584px] h-[422px] z-55">
-          {/* Main Group Image */}
+       
           <img 
             src={group} 
             alt="Group" 
@@ -40,7 +40,7 @@ const About = () => {
           />
         </div>
 
-        {/* Decorative Elements - Hidden on screens <= 1075px */}
+     
         <div className="relative hidden lg:block">
           <img src={Vector} alt="Vector Design" className="vector absolute right-[-142px] top-[-440px] z-50"/>
           <img src={dotted} alt="Dotted Pattern" className="dotted absolute right-[-132px] top-[-125px]"/>

@@ -6,14 +6,14 @@ import idea from "../assets/idea.png";
 const VideoInstructions = () => {
   return (
     <div className="w-full bg-[#1C4670] flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 py-12">
-      {/* Left Section: Text + Icons */}
+      {/* Left Section */}
       <div className="max-w-xl text-center lg:text-left">
         <h2 className="text-white text-2xl sm:text-3xl font-semibold">Our Video Introductions</h2>
         <p className="text-gray-300 mt-2 text-sm sm:text-base">
           Velit purus egestas tellus phasellus. Mattis eget sed faucibus magna vulputate pellentesque a diam tincidunt apis dui.
         </p>
 
-        {/* Bullet Points */}
+       
         <div className="mt-6 space-y-6">
           <div className="flex items-start gap-4">
             <img src={bulb} alt="bulb" className="w-[35px] sm:w-[40px] h-[35px] sm:h-[40px]" loading="lazy" />
@@ -37,7 +37,7 @@ const VideoInstructions = () => {
         </div>
       </div>
 
-      {/* Right Section: Video Image */}
+      {/* Right Section*/}
       <div className="mt-8 lg:mt-0 lg:ml-12 flex justify-center">
         <img
           src={youtube}
