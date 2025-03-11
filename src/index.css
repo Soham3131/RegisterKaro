@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media (max-width: 1075px) {
+    .about-container {
+      flex-direction: column; /* Stack items vertically */
+      height: 680px; /* Adjust height dynamically */
+      text-align: center; /* Center align text */
+      padding: 30px 20px; /* Adjust padding */
+    }
+  
+    .about-text {
+      width: 100%; /* Full width */
+      margin-bottom: 20px; /* Add space below text */
+    }
+  
+    .about-image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center image */
+    }
+  
+    .about-image {
+      width: 70%; /* Reduce image size */
+      height: auto; /* Maintain aspect ratio */
+      position: relative;
+      right: 0;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      box-shadow: none; /* Remove shadow */
+    }
+  
+    .vector, .dotted {
+      display: none; /* Hide vector and dotted pattern */
+    }
+  
+    .about-button {
+      margin-top: 20px; /* Adjust button spacing */
+    }
+  }
+  

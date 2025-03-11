@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Background Gradient */
+.hero-section {
+  @apply bg-gradient-to-r from-[#FFF0DC] via-[#EDF6FF] to-[#FFFFFF];
+}
+
+/* Ensuring No Horizontal Scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Custom Background Color */
+.bg-bluish {
+  background-color: #1C4670;
+}
+
+/* Ensuring Right-Side Buttons Are Fixed */
+.bg-hero-gradient {
+  background: linear-gradient(to right, #fff0dc 10%, #edf6ff 90%);
+}
