@@ -1,16 +1,15 @@
-
 import React, { useState } from 'react';
 import logo from "../assets/logo.png";
 
 const TopBanner = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle menu visibility
+  // Toggle
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Close menu when clicking outside
+  // Close 
   const handleClickOutside = (event) => {
     if (!event.target.closest('.menu-container')) {
       setIsMenuOpen(false);
@@ -29,34 +28,34 @@ const TopBanner = () => {
   return (
     <div className="flex w-full h-[72px] bg-white justify-between items-center px-6 lg:px-14 border-b-2 border-gray-300 relative">
 
-      <img src={logo} alt="Logo" className="w-[120px] h-auto" loading="lazy" />
+      <img src={logo} alt="RegisterKaro Logo" className="w-[120px] h-auto" loading="lazy" />
 
       {/* Navigation Menu  */}
       <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm lg:text-base">
-        <p className="cursor-pointer">Home</p>
-        <p className="cursor-pointer">Our Services</p>
-        <p className="cursor-pointer">Blog</p>
-        <p className="cursor-pointer">Contact Us</p>
-        <p className="cursor-pointer">About Us</p>
-        <p className="cursor-pointer">Search</p>
-        <button className="rounded-md bg-orangish text-white px-4 lg:px-6 py-2 w-auto h-[40px] lg:h-[46px]">
+        <p className="cursor-pointer" aria-label="Go to Home">Home</p>
+        <p className="cursor-pointer" aria-label="View Our Services">Our Services</p>
+        <p className="cursor-pointer" aria-label="Read our Blog">Blog</p>
+        <p className="cursor-pointer" aria-label="Contact Us">Contact Us</p>
+        <p className="cursor-pointer" aria-label="Learn About Us">About Us</p>
+        <p className="cursor-pointer" aria-label="Search">Search</p>
+        <button className="rounded-md bg-orangish text-white px-4 lg:px-6 py-2 w-auto h-[40px] lg:h-[46px]" aria-label="Talk to an Expert">
           Talk to Expert
         </button>
       </div>
 
       {/* Mobile Menu */}
       <div className="md:hidden relative menu-container">
-        <button className="text-2xl" onClick={toggleMenu}>☰</button>
+        <button className="text-2xl" onClick={toggleMenu} aria-label="Toggle Mobile Menu">☰</button>
 
         {isMenuOpen && (
           <div className="absolute top-full right-0 mt-2 w-48 bg-white shadow-lg rounded-md border border-gray-300 z-50">
             <ul className="flex flex-col">
-              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Home</li>
-              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Our Services</li>
-              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Blog</li>
-              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">Contact Us</li>
-              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100">About Us</li>
-              <li className="px-4 py-2 cursor-pointer hover:bg-gray-100">Search</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100" aria-label="Go to Home">Home</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100" aria-label="View Our Services">Our Services</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100" aria-label="Read our Blog">Blog</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100" aria-label="Contact Us">Contact Us</li>
+              <li className="px-4 py-2 border-b cursor-pointer hover:bg-gray-100" aria-label="Learn About Us">About Us</li>
+              <li className="px-4 py-2 cursor-pointer hover:bg-gray-100" aria-label="Search">Search</li>
             </ul>
           </div>
         )}

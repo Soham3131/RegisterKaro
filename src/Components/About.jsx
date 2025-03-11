@@ -24,7 +24,7 @@ const About = () => {
         <p className="text-gray-700 mt-4">
           I would strongly recommend their services to any organization looking for solid, reliable, and predictable outcomes.
         </p>
-        <button className="about-button mt-14 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+        <button className="about-button mt-14 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700" aria-label="Learn More About RegisterKaro">
           Learn More
         </button>
       </div>
@@ -35,15 +35,15 @@ const About = () => {
        
           <img 
             src={group} 
-            alt="Group" 
+            alt="Team Collaboration at RegisterKaro" 
             className="about-image w-[579px] h-[418px] absolute rounded-lg shadow-lg right-[59px] z-50"
           />
         </div>
 
-     
+        
         <div className="relative hidden lg:block">
-          <img src={Vector} alt="Vector Design" className="vector absolute right-[-142px] top-[-440px] z-50"/>
-          <img src={dotted} alt="Dotted Pattern" className="dotted absolute right-[-132px] top-[-125px]"/>
+          <img src={Vector} alt="Vector Graphic Decoration" className="vector absolute right-[-142px] top-[-440px] z-50"/>
+          <img src={dotted} alt="Dotted Pattern Background" className="dotted absolute right-[-132px] top-[-125px]"/>
         </div>
       </div>
 

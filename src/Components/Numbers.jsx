@@ -125,7 +125,7 @@ const Numbers = () => {
             placeholder="Enter Your Email"
             className="px-4 py-3 w-full text-black"
           />
-          <button className="bg-orangish text-white px-6 py-3">
+          <button className="bg-orangish text-white px-6  py-3" aria-label="Submit Form">
             Submit
           </button>
         </div>
